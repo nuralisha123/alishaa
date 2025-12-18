@@ -23,7 +23,7 @@ body{
   padding-top:110px;
 }
 
-/* ===== HEADER ===== */
+
 header{
   position:fixed;
   top:0;left:0;right:0;
@@ -41,7 +41,7 @@ header h2{
   font-size:34px;
 }
 
-/* ===== MUSIC BUTTON (NAIK ATAS) ===== */
+
 .music{
   position:fixed;
   top:76px;
@@ -61,7 +61,7 @@ header h2{
 .music.spin img{animation:spin 2.2s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ===== NAV ===== */
+
 .nav-grid{
   max-width:1200px;
   margin:40px auto 80px;
@@ -99,7 +99,6 @@ header h2{
   object-fit:cover;
 }
 
-/* ===== HERO ===== */
 .hero{
   text-align:center;
   margin-bottom:70px;
@@ -112,7 +111,7 @@ header h2{
 }
 .hero p{color:var(--muted)}
 
-/* ===== GALLERY ===== */
+
 .gallery{
   position:relative;
   padding:160px 40px;
@@ -168,7 +167,7 @@ header h2{
 .medium img{height:260px}
 .large img{height:360px}
 
-/* ===== CAPTION ===== */
+
 .caption{
   padding:16px;
   background:#fff;
@@ -183,7 +182,7 @@ header h2{
   color:var(--muted);
 }
 
-/* ===== POPUP ===== */
+
 .modal{
   position:fixed;
   inset:0;
@@ -215,13 +214,12 @@ header h2{
   cursor:pointer;
 }
 
-/* ===== ANIMATION ===== */
 @keyframes slideInUp{
   from{opacity:0;transform:translateY(50px)}
   to{opacity:1;transform:none}
 }
 
-/* FOOTER */
+
 footer{
   padding:60px 20px;
   background:#7a0f0f;
@@ -232,7 +230,7 @@ footer{
 @media(max-width:900px){.gallery-grid{columns:2}}
 @media(max-width:520px){.gallery-grid{columns:1}}
 
-/* ================= MOBILE RESPONSIVE ================= */
+
 @media (max-width: 768px){
 
   body{
@@ -244,7 +242,7 @@ footer{
   }
 
  
-  /* NAV GRID */
+
   .nav-grid{
     grid-template-columns:repeat(2,1fr);
     gap:14px;
@@ -262,7 +260,7 @@ footer{
     height:42px;
   }
 
-  /* HERO */
+  
   .hero h1{
     font-size:42px;
   }
@@ -272,7 +270,6 @@ footer{
     padding:0 12px;
   }
 
-  /* GALLERY */
   .gallery{
     padding:120px 18px;
   }
@@ -291,7 +288,7 @@ footer{
     height:auto;
   }
 
-  /* CAPTION */
+ 
   .caption{
     padding:14px;
   }
@@ -305,7 +302,7 @@ footer{
   }
 }
 
-/* EXTRA SMALL PHONE */
+
 @media (max-width: 420px){
   header h2{
     font-size:22px;
@@ -349,7 +346,7 @@ footer{
   <div class="gallery-grid" id="galleryGrid"></div>
 </section>
 
-<!-- POPUP -->
+
 <div class="modal" id="modal">
   <span class="close" onclick="closeModal()">✕</span>
   <div class="modal-box">
@@ -360,7 +357,7 @@ footer{
 <footer>© 2025 Nur Alisha · All Rights Reserved</footer>
 
 <script>
-/* ===== ORIGINAL CAPTIONS ===== */
+
 const captions = [
   ["Soft Morning Smile","A calm start to the day"],
   ["flower bell","Moments that feel real"],
@@ -380,10 +377,10 @@ const captions = [
   ["Endless night","Moment before chaos"]
 ];
 
-/* ===== PROTECTED TITLES (TAK BOLEH PADAM) ===== */
+/* ===== PROTECTED TITLES ===== */
 const protectedTitles = ["Cousins","Chasing sunset"];
 
-/* ===== FILTER: BUANG COLLECTION ===== */
+/* ===== FILTER ===== */
 let items = captions
   .map((c,i)=>({ title:c[0], desc:c[1], img:`g${i+1}.jpg` }))
   .filter(item =>
@@ -469,6 +466,7 @@ btn.onclick=async()=>{
 
 </body>
 </html>
+
 
 
 
