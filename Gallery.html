@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GALLERY 🌹</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Montserrat",sans-serif;
+  background:#fff;
+  padding-top:90px;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:64px;
+  background:linear-gradient(90deg,#c00802,#7a0f0f);
+  display:flex;
+  align-items:center;
+  padding:0 24px;
+  color:#fff;
+  z-index:9999;
+}
+header h2{
+  margin:0;
+  font-family:'Great Vibes', cursive;
+  font-size:34px;
+}
+
+/* ================= NAVIGATION ================= */
+.nav-grid{
+  max-width:1200px;
+  margin:40px auto 60px;
+  padding:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:22px;
+  border-radius:28px;
+  background:#fff;
+  box-shadow:
+    0 0 0 4px rgba(192,8,2,.7),
+    0 0 70px rgba(255,30,30,.6);
+}
+.nav-card{
+  height:120px;
+  border-radius:22px;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-decoration:none;
+  color:#c00802;
+  font-weight:800;
+  transition:.35s ease;
+}
+.nav-card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+.nav-card img{
+  width:54px;
+  height:54px;
+  border-radius:14px;
+  object-fit:cover;
+}
+
+/* ================= HERO ================= */
+.hero{
+  text-align:center;
+  margin:60px 0;
+  animation:slideInUp 1s ease forwards;
+}
+.hero h1{
+  font-family:'Great Vibes', cursive;
+  font-size:64px;
+  color:#c00802;
+}
+.hero p{color:#6b3333}
+
+/* ================= GALLERY BACKGROUND ================= */
+.gallery{
+  position:relative;
+  padding:120px 40px;
+}
+.gallery::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("cherryred.jpg") center/cover no-repeat;
+  z-index:0;
+}
+.gallery::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,235,235,0.35);
+  z-index:1;
+}
+
+/* ================= GALLERY GRID ================= */
+.gallery-grid{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:auto;
+  columns:4 260px;
+  column-gap:26px;
+}
+
+/* ================= GALLERY ITEM ================= */
+.gallery-item{
+  break-inside:avoid;
+  margin-bottom:36px;
+  border-radius:22px;
+  overflow:hidden;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+  opacity:0;
+  transform:translateY(60px);
+  transition:all .8s ease;
+}
+.gallery-item.show{
+  opacity:1;
+  transform:none;
+}
+
+.media img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+.small img{height:180px}
+.medium img{height:260px}
+.large img{height:360px}
+
+/* ================= CAPTION ================= */
+.caption{
+  padding:16px;
+  background:#fff;
+}
+.caption h4{
+  margin:0;
+  font-family:'Playfair Display', serif;
+  color:#c00802;
+}
+.caption span{
+  font-size:13px;
+  color:#6b3333;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes slideInUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:none}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){.gallery-grid{columns:2}}
+@media(max-width:520px){.gallery-grid{columns:1}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Alisha’s Gallery 🌹</h2>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav-grid">
+  <a class="nav-card" href="index.html"><img src="home.jpg">HOME</a>
+  <a class="nav-card" href="ABOUTME.html"><img src="aboutme.jpg">ABOUT</a>
+  <a class="nav-card" href="edu.html"><img src="education.jpg">EDU</a>
+  <a class="nav-card" href="family.html"><img src="family.jpg">FAMILY</a>
+  <a class="nav-card" href="Gallery.html"><img src="gallery.jpg">GALLERY</a>
+  <a class="nav-card" href="PETS.html"><img src="pet.jpg">PETS</a>
+</nav>
+
+<section class="hero">
+  <h1>Moments in Motion</h1>
+  <p>Every photo holds a quiet story.</p>
+</section>
+
+<section class="gallery">
+  <div class="gallery-grid">
+
+    <!-- EDIT TITLE & TEXT SAHAJA -->
+    <div class="gallery-item small"><div class="media"><img src="g1.jpg"></div><div class="caption"><h4>Soft Morning Smile</h4><span>A calm start to the day</span></div></div>
+    <div class="gallery-item medium"><div class="media"><img src="g2.jpg"></div><div class="caption"><h4>Flower Bell</h4><span>Moments that feel real</span></div></div>
+    <div class="gallery-item large"><div class="media"><img src="g3.jpg"></div><div class="caption"><h4>Warm Nature</h4><span>Where my heart feels light</span></div></div>
+
+    <div class="gallery-item small"><div class="media"><img src="g4.jpg"></div><div class="caption"><h4>Quiet Mood</h4><span>Peace in silence</span></div></div>
+    <div class="gallery-item medium"><div class="media"><img src="g5.jpg"></div><div class="caption"><h4>Chicken Gyoza</h4><span>Comfort food</span></div></div>
+    <div class="gallery-item small"><div class="media"><img src="g6.jpg"></div><div class="caption"><h4>Raya Day</h4><span>Inspired by the earth</span></div></div>
+
+    <div class="gallery-item medium"><div class="media"><img src="g7.jpg"></div><div class="caption"><h4>Little Happiness</h4><span>Childhood gaming</span></div></div>
+    <div class="gallery-item large"><div class="media"><img src="g8.jpg"></div><div class="caption"><h4>Still Frame</h4><span>A pause in time</span></div></div>
+
+    <div class="gallery-item small"><div class="media"><img src="g9.jpg"></div><div class="caption"><h4>Family Time</h4><span>Comfort in every view</span></div></div>
+    <div class="gallery-item medium"><div class="media"><img src="g10.jpg"></div><div class="caption"><h4>Mehhh</h4><span>Mehhself</span></div></div>
+
+    <div class="gallery-item small"><div class="media"><img src="g11.jpg"></div><div class="caption"><h4>Quiet Beauty</h4><span>Soft soul</span></div></div>
+    <div class="gallery-item medium"><div class="media"><img src="g12.jpg"></div><div class="caption"><h4>Hey Stranger</h4><span>Cherating cat</span></div></div>
+
+    <div class="gallery-item large"><div class="media"><img src="g15.jpg"></div><div class="caption"><h4>Chasing Sunset</h4><span>Girls Day</span></div></div>
+    <div class="gallery-item large"><div class="media"><img src="g16.jpg"></div><div class="caption"><h4>Mehh Eyes</h4><span>I see you..</span></div></div>
+
+  </div>
+</section>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:.15});
+
+document.querySelectorAll(".gallery-item")
+  .forEach(i=>observer.observe(i));
+</script>
+
+</body>
+</html>
+
+
